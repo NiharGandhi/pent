@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -195,16 +195,17 @@ export default function NotePage() {
           {note.blocks.map((block, index) => {
             switch (block.type) {
               case 'heading':
-                const HeadingTag = `h${block.level}` as keyof JSX.IntrinsicElements;
                 const headingClasses = {
                   1: 'text-5xl font-bold text-slate-900 dark:text-white mb-4',
                   2: 'text-3xl font-bold text-slate-900 dark:text-white mb-3 mt-8',
                   3: 'text-2xl font-semibold text-slate-900 dark:text-white mb-2'
                 };
-                return (
-                  <HeadingTag key={index} className={headingClasses[block.level || 1]}>
-                    {block.content}
-                  </HeadingTag>
+                const level = block.level || 1;
+                const HeadingTag = `h${level}` as 'h1' | 'h2' | 'h3';
+                return React.createElement(
+                  HeadingTag,
+                  { key: index, className: headingClasses[level] },
+                  block.content
                 );
 
               case 'text':
