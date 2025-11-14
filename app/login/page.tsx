@@ -2,12 +2,10 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { signIn, signUp } from '@/lib/auth';
+import { signIn } from '@/lib/auth';
 
 export default function LoginPage() {
-  const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -19,25 +17,13 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      if (isLogin) {
-        const { data, error } = await signIn(username, password);
-        if (error) {
-          setError(error);
-        } else if (data) {
-          localStorage.setItem('userId', data.id);
-          localStorage.setItem('username', data.username);
-          router.push('/dashboard');
-        }
-      } else {
-        const { data, error } = await signUp(username, email, password);
-        if (error) {
-          setError(error);
-        } else {
-          setError('');
-          setIsLogin(true);
-          setPassword('');
-          alert('Account created successfully! Please login.');
-        }
+      const { data, error } = await signIn(username, password);
+      if (error) {
+        setError(error);
+      } else if (data) {
+        localStorage.setItem('userId', data.id);
+        localStorage.setItem('username', data.username);
+        router.push('/dashboard');
       }
     } catch (err) {
       setError('An unexpected error occurred');
@@ -52,10 +38,10 @@ export default function LoginPage() {
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-              {isLogin ? 'Welcome Back' : 'Create Account'}
+              Welcome Back
             </h1>
             <p className="text-slate-600 dark:text-slate-400">
-              {isLogin ? 'Sign in to access your notes' : 'Sign up to get started'}
+              Sign in to access your notes
             </p>
           </div>
 
@@ -74,23 +60,6 @@ export default function LoginPage() {
                 placeholder="Enter your username"
               />
             </div>
-
-            {!isLogin && (
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white transition-all"
-                  placeholder="Enter your email"
-                />
-              </div>
-            )}
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -118,22 +87,9 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
             >
-              {loading ? 'Please wait...' : isLogin ? 'Sign In' : 'Sign Up'}
+              {loading ? 'Please wait...' : 'Sign In'}
             </button>
           </form>
-
-          <div className="mt-6 text-center">
-            <button
-              onClick={() => {
-                setIsLogin(!isLogin);
-                setError('');
-                setPassword('');
-              }}
-              className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm transition-colors"
-            >
-              {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
-            </button>
-          </div>
         </div>
       </div>
     </div>

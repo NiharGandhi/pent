@@ -1,0 +1,9 @@
+1. no signup only login.
+2. when logged in: remove the 'how to play' box, 
+- page one : "Ideas for Seminars"  1. Cybersecurity Awareness Seminar  2. Work Life Balance Seminar 3. Conflict resolution seminar (/public/seminar.webp)
+- page two: Christmas Trip to Switzerland Itinerary: 1. Visit Lindt Chocolate Factory 2. Ride the Glacier Express 3. Take a boat trip on Lake Geneva 4. Visit Jungfraujoch mountain (/public/switzerland)
+- page three: "To do list" in this page have a list of things that HR has to do for the day like 1. email the list of candidates 2. Fire Alice and Bob 3. Grab lunch with Darth 4. Walk fluffy (/public/doge.png)
+- page four: "High School Reunion Agenda" 1. Send out invites 2. Call Catering 3. Buy Decorations 4. Print yearbooks (/public/useless.png)
+
+Landing Page:
+For the landing page, make it a tech company that has products like ai chatbot, cloud services, website development company called 'faanj'

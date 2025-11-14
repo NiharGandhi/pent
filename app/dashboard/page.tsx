@@ -27,30 +27,30 @@ export default function Dashboard() {
 
     setUsername(storedUsername);
 
-    // Hardcoded notes for the game
+    // Hardcoded notes
     setNotes([
       {
         id: '1',
-        title: 'The Ancient Library',
-        emoji: '📚',
+        title: 'Ideas for Seminars',
+        emoji: '💡',
         lastEdited: 'Just now'
       },
       {
         id: '2',
-        title: 'Mystery of the Hidden Vault',
-        emoji: '🔐',
+        title: 'Christmas Trip to Switzerland Itinerary',
+        emoji: '🎄',
         lastEdited: '2 hours ago'
       },
       {
         id: '3',
-        title: 'Secret Garden Clues',
-        emoji: '🌸',
+        title: 'To Do List',
+        emoji: '🐕',
         lastEdited: 'Yesterday'
       },
       {
         id: '4',
-        title: 'The Cipher Chronicles',
-        emoji: '🔑',
+        title: 'High School Reunion Agenda',
+        emoji: '🎓',
         lastEdited: 'Last week'
       }
     ]);
@@ -111,7 +111,7 @@ export default function Dashboard() {
               Welcome, {username}
             </h1>
             <p className="text-slate-600 dark:text-slate-400 text-lg">
-              Explore your mystery pages and uncover hidden messages
+              View your pages and manage your content
             </p>
           </div>
 
@@ -135,18 +135,6 @@ export default function Dashboard() {
                 </p>
               </Link>
             ))}
-          </div>
-
-          <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-            <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-              How to Play
-            </h2>
-            <ul className="space-y-2 text-slate-600 dark:text-slate-400">
-              <li>• Click on any page to view its contents</li>
-              <li>• Each page contains images with hidden messages</li>
-              <li>• Download images to examine them closely</li>
-              <li>• Find all the hidden clues to solve the mystery</li>
-            </ul>
           </div>
         </div>
       </div>

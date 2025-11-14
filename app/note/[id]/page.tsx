@@ -24,106 +24,92 @@ interface Block {
 const sampleNotes: Record<string, NoteContent> = {
   '1': {
     id: '1',
-    title: 'The Ancient Library',
-    emoji: '📚',
+    title: 'Ideas for Seminars',
+    emoji: '💡',
     blocks: [
-      { type: 'heading', content: 'The Ancient Library', level: 1 },
-      { type: 'text', content: 'Deep within the halls of knowledge, secrets await those who seek them.' },
+      { type: 'heading', content: 'Ideas for Seminars', level: 1 },
+      { type: 'text', content: 'Here are some great seminar ideas for our upcoming company events:' },
       { type: 'divider' },
-      { type: 'heading', content: 'Chapter 1: The First Clue', level: 2 },
-      { type: 'text', content: 'In the dusty corners of forgotten shelves, a mysterious book caught my attention. Its leather cover was worn, but the golden embossing still gleamed in the dim light.' },
+      { type: 'heading', content: '1. Cybersecurity Awareness Seminar', level: 2 },
+      { type: 'text', content: 'An essential training session covering best practices for online security, password management, phishing detection, and data protection.' },
+      { type: 'heading', content: '2. Work Life Balance Seminar', level: 2 },
+      { type: 'text', content: 'Learn techniques for maintaining healthy boundaries, managing stress, and achieving better balance between professional and personal life.' },
+      { type: 'heading', content: '3. Conflict Resolution Seminar', level: 2 },
+      { type: 'text', content: 'Develop skills in communication, negotiation, and mediation to effectively resolve workplace conflicts and build stronger team relationships.' },
       {
         type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800',
-        imageAlt: 'Ancient books on shelf',
-        hiddenMessage: 'FIRST_CLUE: Look for the red bookmark'
-      },
-      { type: 'text', content: 'The pages whispered stories of ancient times, but one page stood out - it had a peculiar watermark that seemed to glow when held to the light.' },
-      { type: 'heading', content: 'The Discovery', level: 2 },
-      {
-        type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800',
-        imageAlt: 'Open ancient book',
-        hiddenMessage: 'SECOND_CLUE: The answer lies in page 237'
-      },
-      { type: 'text', content: 'What mysteries lie within these pages? Download the images and examine them carefully - you might find more than meets the eye.' }
+        imageUrl: '/seminar.webp',
+        imageAlt: 'Seminar presentation'
+      }
     ]
   },
   '2': {
     id: '2',
-    title: 'Mystery of the Hidden Vault',
-    emoji: '🔐',
+    title: 'Christmas Trip to Switzerland Itinerary',
+    emoji: '🎄',
     blocks: [
-      { type: 'heading', content: 'Mystery of the Hidden Vault', level: 1 },
-      { type: 'text', content: 'Behind the portrait of the founder lies a secret that has been kept for generations.' },
+      { type: 'heading', content: 'Christmas Trip to Switzerland Itinerary', level: 1 },
+      { type: 'text', content: 'Our exciting winter adventure through the Swiss Alps!' },
       { type: 'divider' },
+      { type: 'heading', content: '1. Visit Lindt Chocolate Factory', level: 2 },
+      { type: 'text', content: 'Experience the magical world of Swiss chocolate making at the famous Lindt factory. Enjoy tastings and shop for delicious souvenirs.' },
+      { type: 'heading', content: '2. Ride the Glacier Express', level: 2 },
+      { type: 'text', content: 'Take the scenic train journey through the Swiss Alps, one of the most breathtaking railway routes in the world.' },
+      { type: 'heading', content: '3. Take a boat trip on Lake Geneva', level: 2 },
+      { type: 'text', content: 'Cruise across the pristine waters of Lake Geneva, surrounded by mountains and charming lakeside villages.' },
+      { type: 'heading', content: '4. Visit Jungfraujoch mountain', level: 2 },
+      { type: 'text', content: 'Journey to the "Top of Europe" and experience stunning views, ice palaces, and the highest railway station in Europe.' },
       {
         type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800',
-        imageAlt: 'Ornate vault door',
-        hiddenMessage: 'VAULT_CODE: 7-3-9-2'
-      },
-      { type: 'text', content: 'The vault requires a four-digit code. Legends say it was hidden in plain sight, visible only to those who know where to look.' },
-      { type: 'heading', content: 'The Mechanism', level: 2 },
-      { type: 'text', content: 'Each tumbler represents a piece of history. Turn them in the right order, and the secrets of the past will be revealed.' },
-      {
-        type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
-        imageAlt: 'Lock mechanism',
-        hiddenMessage: 'HINT: The founder was born in 1792'
-      },
-      { type: 'text', content: 'Time is running out. Can you crack the code before sunset?' }
+        imageUrl: '/switzerland.jpeg',
+        imageAlt: 'Switzerland landscape'
+      }
     ]
   },
   '3': {
     id: '3',
-    title: 'Secret Garden Clues',
-    emoji: '🌸',
+    title: 'To Do List',
+    emoji: '🐕',
     blocks: [
-      { type: 'heading', content: 'Secret Garden Clues', level: 1 },
-      { type: 'text', content: 'In the heart of the garden, where roses bloom eternal, lies a path known only to the initiated.' },
-      {
-        type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
-        imageAlt: 'Secret garden path',
-        hiddenMessage: 'GARDEN_SECRET: Follow the white roses'
-      },
+      { type: 'heading', content: 'HR To Do List', level: 1 },
+      { type: 'text', content: 'Important tasks for today:' },
       { type: 'divider' },
-      { type: 'heading', content: 'The Rose Cipher', level: 2 },
-      { type: 'text', content: 'Each rose holds a letter. Red for consonants, white for vowels. Count the petals to decode the message.' },
+      { type: 'heading', content: '1. Email the list of candidates', level: 2 },
+      { type: 'text', content: 'Send out the shortlisted candidate profiles to the department heads for review before the interviews next week.' },
+      { type: 'heading', content: '2. Fire Alice and Bob', level: 2 },
+      { type: 'text', content: 'Schedule termination meetings with Alice and Bob. Prepare severance packages and ensure IT access is revoked appropriately.' },
+      { type: 'heading', content: '3. Grab lunch with Darth', level: 2 },
+      { type: 'text', content: 'Meet with Darth at 12:30 PM to discuss the Q4 hiring strategy and team restructuring plans.' },
+      { type: 'heading', content: '4. Walk fluffy', level: 2 },
+      { type: 'text', content: 'Take the office therapy dog Fluffy for his afternoon walk around the campus. Don\'t forget treats!' },
       {
         type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
-        imageAlt: 'Rose garden',
-        hiddenMessage: 'MESSAGE: TRUTH BLOOMS AT MIDNIGHT'
-      },
-      { type: 'text', content: 'When the moon is full and the nightingale sings, the garden reveals its deepest secrets.' }
+        imageUrl: '/doge.png',
+        imageAlt: 'Fluffy the dog'
+      }
     ]
   },
   '4': {
     id: '4',
-    title: 'The Cipher Chronicles',
-    emoji: '🔑',
+    title: 'High School Reunion Agenda',
+    emoji: '🎓',
     blocks: [
-      { type: 'heading', content: 'The Cipher Chronicles', level: 1 },
-      { type: 'text', content: 'Every great mystery needs a key. But what if the key itself is encrypted?' },
+      { type: 'heading', content: 'High School Reunion Agenda', level: 1 },
+      { type: 'text', content: 'Planning checklist for our 10-year reunion:' },
       { type: 'divider' },
+      { type: 'heading', content: '1. Send out invites', level: 2 },
+      { type: 'text', content: 'Finalize the guest list and send digital invitations with RSVP options. Include event details, date, time, and venue information.' },
+      { type: 'heading', content: '2. Call Catering', level: 2 },
+      { type: 'text', content: 'Contact the catering company to confirm menu selections, dietary restrictions, and final headcount for the event.' },
+      { type: 'heading', content: '3. Buy Decorations', level: 2 },
+      { type: 'text', content: 'Purchase school colors balloons, banners, table centerpieces, and a photo backdrop with our graduation year.' },
+      { type: 'heading', content: '4. Print yearbooks', level: 2 },
+      { type: 'text', content: 'Order reprints of our senior yearbook as keepsakes and create a "Where Are They Now?" booklet with updates from classmates.' },
       {
         type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?w=800',
-        imageAlt: 'Ancient keys',
-        hiddenMessage: 'MASTER_KEY: CIPHER_ALPHA_OMEGA'
-      },
-      { type: 'text', content: 'The ancient cipher masters left behind a series of encrypted messages. Each one leads to the next, forming an unbreakable chain of knowledge.' },
-      { type: 'heading', content: 'Decryption Guide', level: 2 },
-      { type: 'text', content: 'To decrypt the final message, you must first collect all the clues from the other pages. Only then will the pattern become clear.' },
-      {
-        type: 'image',
-        imageUrl: 'https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=800',
-        imageAlt: 'Cipher wheel',
-        hiddenMessage: 'FINAL_ANSWER: The treasure lies beneath the oak tree in the courtyard'
-      },
-      { type: 'text', content: 'You have all the pieces. Now, can you solve the ultimate puzzle?' }
+        imageUrl: '/useless.png',
+        imageAlt: 'High school memories'
+      }
     ]
   }
 };
@@ -267,18 +253,6 @@ export default function NotePage() {
                 return null;
             }
           })}
-        </div>
-
-        <div className="mt-12 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-            Detective Tips
-          </h3>
-          <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
-            <li>• Hover over images to reveal download and clue options</li>
-            <li>• Hidden messages are embedded in each image</li>
-            <li>• Download images to examine them more carefully</li>
-            <li>• Collect all clues to solve the complete mystery</li>
-          </ul>
         </div>
       </div>
     </div>
